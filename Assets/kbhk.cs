@@ -35,18 +35,18 @@ public class code : MonoBehaviour
     {
         if (isGameOver) return;
 
-        // Saldırı animasyonlarını oynat
+
         if (p1Anim != null) p1Anim.SetTrigger("Attack");
         if (enemyAnim != null) enemyAnim.SetTrigger("Hurt");
 
-        // 1. Efekti sıfırla ve tekrar oynat
+
         if (attack1Effect != null)
         {
             attack1Effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             attack1Effect.Play(true);
         }
 
-        // Hasar ver (10 hasar)
+        
         TakeDamage(10);
     }
 
@@ -54,18 +54,18 @@ public class code : MonoBehaviour
     {
         if (isGameOver) return;
 
-        // Saldırı animasyonlarını oynat
+        
         if (p1Anim != null) p1Anim.SetTrigger("Attack");
         if (enemyAnim != null) enemyAnim.SetTrigger("Hurt");
 
-        // 2. Efekti sıfırla ve tekrar oynat
+       
         if (attack2Effect != null)
         {
             attack2Effect.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
             attack2Effect.Play(true);
         }
 
-        // Hasar ver (20 hasar)
+        
         TakeDamage(20);
     }
 
